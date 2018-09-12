@@ -47,6 +47,8 @@ gem 'rolify'
 
 #Admin dashboard
 gem 'rails_admin', '~> 1.3'
+#files handling
+gem 'remotipart', github: 'mshibuya/remotipart'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

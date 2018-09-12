@@ -5,9 +5,15 @@ Rails.application.routes.draw do
   #user authentication routes
   devise_for :users
 
-  #define the main route
-  root to: 'home#landing' 
-  
+  #define the main routes 
+  authenticated :user do
+    root to: 'home#welcome'
+  end
+  unauthenticated :user do
+    root to: 'home#landing'
+  end
+
   #define welcome route
-  get 'welcome', to: 'home#welcome', as: :onlyAdmin
+  get 'welcome', to: 'home#welcome', as: :welcome
+  get 'landing', to: 'home#landing', as: :landing
 end
