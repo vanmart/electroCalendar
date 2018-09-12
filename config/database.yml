@@ -17,14 +17,19 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  # Database host
+  host: localhost
+  port: 5432
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  
 
 development:
   <<: *default
-  database: electro_calendar_development
-
+  database: electro_calendar_dev
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -58,7 +63,8 @@ development:
 test:
   <<: *default
   database: electro_calendar_test
-
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -81,5 +87,5 @@ test:
 production:
   <<: *default
   database: electro_calendar_production
-  username: electro_calendar
-  password: <%= ENV['ELECTRO_CALENDAR_DATABASE_PASSWORD'] %>
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
