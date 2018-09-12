@@ -43,6 +43,7 @@ GEM
     bindex (0.5.0)
     builder (3.2.3)
     byebug (10.0.2)
+    cancancan (2.2.0)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -126,6 +127,7 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    rolify (5.2.0)
     sass (3.5.7)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -175,6 +177,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  cancancan
   coffee-rails (~> 4.2)
   devise
   figaro
@@ -184,6 +187,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.0)
   rails (~> 5.0.7)
+  rolify
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
