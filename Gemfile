@@ -45,6 +45,18 @@ gem 'cancancan'
 #User Roles
 gem 'rolify'
 
+#Admin dashboard
+gem 'rails_admin', '~> 1.3'
+#Files handling on dashboard
+gem 'remotipart', github: 'mshibuya/remotipart'
+
+#Boostrap
+#compiling and serving assets, also a precompressor of scss, sass and coffeescript
+gem 'jquery-rails'
+gem 'popper_js', '~> 1.14.3'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'bootstrap'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
