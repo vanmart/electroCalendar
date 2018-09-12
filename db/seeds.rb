@@ -5,10 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Role.create([{ name: 'MasterAdmin' }, { name: 'Admin' }, { name: 'Stylist' }, { name: 'Client' }, { name: 'Visitor' }])
-
-masterAdmin = User.create({
-                            email: 'vanx@mail.com',
-                            password: '1234321',
-                            roles: [Role.find_by_name('MasterAdmin')]
-                        })
