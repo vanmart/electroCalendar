@@ -11,5 +11,7 @@ validates :resource_type,
           :inclusion => { :in => Rolify.resource_types },
           :allow_nil => true
 
+validates :name, uniqueness: { case_sensitive: false }
+
 scopify
 end
